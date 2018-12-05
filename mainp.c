@@ -30,7 +30,7 @@ int main() { //declaracion de variables, siendo la pendiente, la interseccion en
 		for(j=0;j<delta;j++){
 		
 
-			//genera numeros aleatoriso en un rango datos como nuevas 				pendientes se incluyen lines como ocmentarios para evaluar cada 			paso			
+			//genera numeros aleatoriso en un rango datos como nuevas pendientes se incluyen lines como comentarios para evaluar cada paso			
 			mn=m0-(1)+(2)*(rand()/(double)RAND_MAX);
 			bn=b0-(1)+(2)*(rand()/(double)RAND_MAX);
 			//printf("%f %f\n",mn,bn);
@@ -40,7 +40,7 @@ int main() { //declaracion de variables, siendo la pendiente, la interseccion en
 			//px02=percenty(m0,b0);
 			pxn2=percenty(mn,bn);
 			//printf("%.30f %.30f\n",px02 ,pxn2);			
-			//se evalua la primera condicion del sistema metropolis a lcomparar 				2 likelihoods.			
+			//se evalua la primera condicion del sistema metropolis al comparar 2 likelihoods.			
 			if(px0<pxn){
 				//printf("%.30f\n",pxn);
 			m0=mn;
@@ -48,7 +48,7 @@ int main() { //declaracion de variables, siendo la pendiente, la interseccion en
 			//fprintf(resultados,"%f %f \n", m0, b0);
 			}
 				
-			//en caso de que lo anterior sea falso se evalua la segunda	 				condicion con un nuevo valor aleatorio
+			//en caso de que lo anterior sea falso se evalua la segunda condicion con un nuevo valor aleatorio
 			else{
 				//printf("%.30f\n",px0);
 				ale= rand()/(double)RAND_MAX;
@@ -57,7 +57,7 @@ int main() { //declaracion de variables, siendo la pendiente, la interseccion en
 				b0=bn;
 				//fprintf(resultados,"%f %f \n", m0, b0);
 				}
-			//si ningun caso se cumple no se sustituyen los valores anteriores 				y se imprimen de nuevo.
+			//si ningun caso se cumple no se sustituyen los valores anteriores y se imprimen de nuevo.
 			}
 			//se imprimen resultados del proces o anterios
 			fprintf(resultados,"%f %f \n", m0, b0); 
